@@ -10,7 +10,7 @@ namespace LYQ.TokenDemo.Models
 {
     public class TokenHelper
     {
-        private const string SecretKey = "abcqwe123";
+        private const string SecretKey = "LYQ.abcqwe123";
 
         public static string GenToken()
         {

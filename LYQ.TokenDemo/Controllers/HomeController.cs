@@ -11,7 +11,7 @@ namespace LYQ.TokenDemo.Controllers
     {
         [HttpGet]
         public ActionResult Index()
-        {
+        {            
             ViewBag.Token = TokenHelper.GenToken();
             return View();
         }

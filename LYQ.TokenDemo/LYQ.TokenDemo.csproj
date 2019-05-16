@@ -157,6 +157,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CustomAttribute\AuthorizeAttribute.cs" />
+    <Compile Include="Models\Infrastructure\AppManager.cs" />
+    <Compile Include="Models\Infrastructure\Key.cs" />
     <Compile Include="Models\Token\Claim.cs" />
     <Compile Include="Models\Token\TokenHelper.cs" />
     <Compile Include="Models\Token\TokenInfo.cs" />

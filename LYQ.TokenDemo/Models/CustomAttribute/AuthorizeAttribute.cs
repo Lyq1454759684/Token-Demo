@@ -6,15 +6,15 @@ using System.Web.Mvc;
 
 namespace LYQ.TokenDemo.Models.CustomAttribute
 {
-    public class AuthorizeAttribute : FilterAttribute, IActionFilter
+    public class AuthorizeAttribute : FilterAttribute, IAuthorizationFilter
     {
-        public void OnActionExecuted(ActionExecutedContext filterContext)
+        public void OnAuthorization(AuthorizationContext filterContext)
         {
+            var httpContext = filterContext.HttpContext;
+            var actionDescription = filterContext.ActionDescriptor;
 
-        }
-
-        public void OnActionExecuting(ActionExecutingContext filterContext)
-        {
+            if (actionDescription.IsDefined(typeof(AllowAnonymousAttribute), false) ||
+                actionDescription.ControllerDescriptor.IsDefined(typeof(AllowAnonymousAttribute), false)) { return; }
 
         }
     }
