@@ -4,4 +4,31 @@
 
 <h1>Test</h1>
 
-<p style="width:200px;">@ViewBag.Token</p>
+<p style="width:200px;">Test</p>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/StaticFiles/Frontend/Scripts/Common.js"></script>
+
+<script type="text/javascript">
+
+    $(function () {
+
+        LYQ.sendAjaxRequest({
+            type: "post",
+            url: "/Home/TestPost",                     
+            param: "",            
+            dataType: "json",
+            callBack: function (result) {
+                if (result == "y") {
+                    console.log("Ajax request is success, request result is:" + result);
+                } else {
+                    console.log("Ajax request is fail, reason is:" + result);
+                }
+            }    
+        });
+
+        LYQ.getRequestHeaderAuthorizationToken();
+
+    })
+
+</script>

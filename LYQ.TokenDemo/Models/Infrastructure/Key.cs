@@ -7,7 +7,9 @@ namespace LYQ.TokenDemo.Models.Infrastructure
 {
     public class Key
     {
-        public const string UserLoginCookieKey = "LYQ.UserLoginKey";
+        public const string CookieKey = "LYQ.Cookie_Key";
+
+
 
     }
 }
