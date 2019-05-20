@@ -316,3 +316,4 @@ E:\Project\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.csproj.CoreCompileIn
 E:\Project\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.csproj.CopyComplete
 E:\Project\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.dll
 E:\Project\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.pdb
+E:\Project\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.csprojAssemblyReference.cache

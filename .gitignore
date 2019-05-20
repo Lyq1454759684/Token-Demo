@@ -8,6 +8,8 @@
 *.user
 *.userosscache
 *.sln.docstates
+.vs\LYQ.TokenDemo\v15\
+
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
