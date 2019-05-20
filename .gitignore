@@ -10,7 +10,7 @@
 *.sln.docstates
 /.vs/LYQ.TokenDemo/v15/
 /obj/Debug/
-/bin
+/bin/*
 *.dll
 
 
