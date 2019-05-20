@@ -8,8 +8,9 @@
 *.user
 *.userosscache
 *.sln.docstates
-/.vs/LYQ.TokenDemo/v15/
-/obj/Debug/
+/.vs/LYQ.TokenDemo/v15/*
+/.vs/LYQ.TokenDemo/config/*
+/Debug/*
 /bin/*
 *.dll
 
