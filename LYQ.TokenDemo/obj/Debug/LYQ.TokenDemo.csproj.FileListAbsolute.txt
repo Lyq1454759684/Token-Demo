@@ -206,7 +206,6 @@ E:\Demo\Tkoen\Token-Demo\LYQ.TokenDemo\bin\zh-Hans\System.Web.WebPages.Razor.res
 E:\Demo\Tkoen\Token-Demo\LYQ.TokenDemo\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
 E:\Demo\Tkoen\Token-Demo\LYQ.TokenDemo\bin\zh-Hans\System.Web.Http.resources.dll
 E:\Demo\Tkoen\Token-Demo\LYQ.TokenDemo\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
-E:\Demo\Tkoen\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.csprojAssemblyReference.cache
 E:\Demo\Tkoen\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.csproj.CoreCompileInputs.cache
 E:\Demo\Tkoen\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.csproj.CopyComplete
 E:\Demo\Tkoen\Token-Demo\LYQ.TokenDemo\obj\Debug\LYQ.TokenDemo.dll
