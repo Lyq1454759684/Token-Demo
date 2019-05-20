@@ -8,9 +8,10 @@
 *.user
 *.userosscache
 *.sln.docstates
-.vs\LYQ.TokenDemo\v15\
-obj\Debug\
-bin\
+/.vs/LYQ.TokenDemo/v15/
+/obj/Debug/
+/bin
+*.dll
 
 
 # User-specific files (MonoDevelop/Xamarin Studio)
