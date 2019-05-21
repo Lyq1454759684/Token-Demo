@@ -1,5 +1,6 @@
 ﻿using LYQ.TokenDemo.Models;
 using LYQ.TokenDemo.Models.Infrastructure;
+using LYQ.TokenDemo.Models.Token;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,22 +14,25 @@ namespace LYQ.TokenDemo.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-
-            Response.Cookies.Add(new HttpCookie(Key.CookieKey, TokenHelper.GenToken()));
-            Response.Cookies.Add(new HttpCookie("name", "Tim"));
-
             return View();
         }
 
         [HttpPost]
         public ActionResult TestPost()
         {
-            var header = HttpContext.Request.Headers["Authorization"];
+            var user = AppManager.UserState;
 
-            if (!string.IsNullOrEmpty(header))
+            if (!string.IsNullOrEmpty(user.UserName))
                 return Json("y");
             else
                 return Json("n");
+        }
+
+        [HttpGet]
+        [LYQ.TokenDemo.Models.CustomAttribute.Authorize(false)]
+        public ActionResult Login()
+        {
+            return View();
         }
 
     }

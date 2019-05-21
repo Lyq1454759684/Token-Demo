@@ -27,6 +27,7 @@
             //else
             //    return null;
             console.log(document_cookie);
+            return document_cookie;
         },
         getAuthorizationKey: function () {
             return 'Authorization';

@@ -12,7 +12,6 @@
 <script type="text/javascript">
 
     $(function () {
-
         LYQ.sendAjaxRequest({
             type: "post",
             url: "/Home/TestPost",                     
@@ -25,10 +24,7 @@
                     console.log("Ajax request is fail, reason is:" + result);
                 }
             }    
-        });
-
-        LYQ.getRequestHeaderAuthorizationToken();
-
+        });     
     })
 
 </script>

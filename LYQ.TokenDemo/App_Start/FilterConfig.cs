@@ -7,6 +7,8 @@ namespace LYQ.TokenDemo
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
+
+            filters.Add(new LYQ.TokenDemo.Models.CustomAttribute.AuthorizeAttribute());
             filters.Add(new HandleErrorAttribute());
         }
     }

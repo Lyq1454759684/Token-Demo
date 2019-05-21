@@ -11,7 +11,7 @@ namespace LYQ.TokenDemo.Models
         {
             iss = "LYQ";
             iat = (DateTime.UtcNow - new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc)).TotalSeconds;
-            exp = iat + 600;
+            exp = iat + 10;
             aud = "";
             sub = "HomeCare.VIP";
             jti = "LYQ." + DateTime.Now.ToString("yyyyMMddhhmmss");
