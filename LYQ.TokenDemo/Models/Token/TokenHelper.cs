@@ -56,7 +56,6 @@ namespace LYQ.TokenDemo.Models
             }
             catch (Exception)
             {
-
                 return "";
             }
         }
