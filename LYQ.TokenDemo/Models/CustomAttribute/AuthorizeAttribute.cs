@@ -41,6 +41,11 @@ namespace LYQ.TokenDemo.Models.CustomAttribute
                     filterContext.Result = new RedirectResult(("/Home/Login"));
                 }
             }
+            else
+            {
+                var cookie = new HttpCookie(Key.AuthorizeCookieKey, TokenHelper.GenerateToken());
+                filterContext.HttpContext.Response.Cookies.Add(cookie);
+            }
 
         }
     }

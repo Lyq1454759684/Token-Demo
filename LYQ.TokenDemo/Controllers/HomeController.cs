@@ -35,5 +35,24 @@ namespace LYQ.TokenDemo.Controllers
             return View();
         }
 
+        [HttpPost]
+        [LYQ.TokenDemo.Models.CustomAttribute.Authorize(false)]
+        public ActionResult Login(string account, string password)
+        {
+            if (account == "Tim" && password == "abc123")
+            {
+                var cookie = new HttpCookie(Key.AuthorizeCookieKey, TokenHelper.GenerateToken());
+                HttpContext.Response.Cookies.Add(cookie);                
+                return Json("y");
+            }
+            else
+            {
+                var cookie = new HttpCookie(Key.AuthorizeCookieKey, "");
+                HttpContext.Response.Cookies.Add(cookie);
+                return Json("n");
+            }
+
+        }
+
     }
 }
