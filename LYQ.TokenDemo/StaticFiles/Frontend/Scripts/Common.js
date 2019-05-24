@@ -5,12 +5,15 @@
             $.ajax({
                 type: opts.type || "post",
                 url: opts.url,
-                data: opts.param || {},              
-                beforeSend: function (XMLHttpRequest) {                    
+                data: opts.param || {},
+                contentType: opts.contentType === null ? true : opts.contentType,
+                cache: opts.cache === null ? true : opts.cache,
+                processData: opts.processData === null ? true : opts.processData,
+                beforeSend: function (XMLHttpRequest) {
                     XMLHttpRequest.setRequestHeader(LYQ.getAuthorizationKey(), "");
                 },
                 dataType: opts.dataType || "json",
-                success: function (result) {                    
+                success: function (result) {
                     if (Object.prototype.toString.call(opts.callBack) === "[object Function]") {   //判断callback 是否是 function               
                         opts.callBack(result);
                     } else {
@@ -18,7 +21,7 @@
                     }
                 }
             });
-        },        
+        },
         getRequestHeaderAuthorizationToken: function () {
             var document_cookie = document.cookie;
             //var reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
@@ -32,7 +35,7 @@
         getAuthorizationKey: function () {
             return 'Authorization';
         }
-    };        
+    };
 
     window.LYQ = functions;
 })(this);

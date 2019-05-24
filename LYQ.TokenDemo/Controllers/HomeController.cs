@@ -3,6 +3,7 @@ using LYQ.TokenDemo.Models.Infrastructure;
 using LYQ.TokenDemo.Models.Token;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -42,7 +43,7 @@ namespace LYQ.TokenDemo.Controllers
             if (account == "Tim" && password == "abc123")
             {
                 var cookie = new HttpCookie(Key.AuthorizeCookieKey, TokenHelper.GenerateToken());
-                HttpContext.Response.Cookies.Add(cookie);                
+                HttpContext.Response.Cookies.Add(cookie);
                 return Json("y");
             }
             else
@@ -51,8 +52,23 @@ namespace LYQ.TokenDemo.Controllers
                 HttpContext.Response.Cookies.Add(cookie);
                 return Json("n");
             }
-
         }
+
+        [HttpPost]
+        public ActionResult UploadFile(HttpPostedFileBase uploadFiles)
+        {
+            if (uploadFiles != null && uploadFiles.ContentLength > 0)
+            {
+                string fileName = uploadFiles.FileName;
+
+                string filePath = @"E:\" + fileName;
+
+                uploadFiles.SaveAs(filePath);
+            }
+
+            return null;
+        }
+
 
     }
 }
